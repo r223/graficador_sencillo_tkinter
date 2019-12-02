@@ -1,0 +1,104 @@
+NOTAS SOBRE EL PROGRAMA:
+Los datos numericos que se ingresen deben de estar separados por comas de esta manera:
+    1,2,3,4,5,6
+
+
+COSAS QUE DEBES DE CONOCER PRIMERO PARA ENTENDER:
+
+Curso python
+https://www.youtube.com/watch?v=chPhlsHoEPo
+Te puedes saltar la parte 8 (Tuplas) y parte 9 (Sets)
+
+- metodo .split()
+https://www.youtube.com/watch?v=2x-hDZqDgtU
+Hasta el minuto 1:40 es suficiente
+
+- Utilizando la palabra "for" en diccionarios de python
+http://elclubdelautodidacta.es/wp/2012/08/python-recorriendo-un-diccionario-de-principio-a-fin/
+
+
+Una vez entendido eso lee lo siguiente:
+
+-Tkinter es la libreria/extension de python que nos permite
+crear interfaces graficas, como lo son ventanas con botones, texto etc.
+
+-Matplotlib es la libreria/extension de python que nos permite
+generar facilmente graficas. Una vez dentro del sistema Raspberry
+en la terminal tienes que correr este comando: 
+    sudo apt-get install python3-matplotlib
+Para instalar esta libreria.
+
+
+
+La estructura basica de nuesto diccionario en el programa:
+    diccionario_de_datos = {
+        'nombre datos 1': lista_datos1,
+        'nombre datos 2': lista_datos2
+        ...
+    }
+Por ejemplo:
+    diccionario_de_datos = {
+        'numeros fibonacci': [1, 1, 2, 3, 5, 8],
+        'numeros primos': [2, 3, 5, 7, 11, 13],
+        'numeros random': [4, 2, 5, 9, 0]
+    }
+
+
+Cosas basicas de Tkinter
+Para crear una ventana utilizamos este codigo:
+    nombre_de_tu_ventana = Tk()
+En nuestro programa nuestra ventana le nombramos simplemente "tk" por lo tanto:
+    tk = Tk()
+
+Los elementos de tkinter que utilizamos son los siguientes:
+-Label: Es una etiqueta o un texto que se muestra en la ventana
+-Button: Boton que se muestra en la ventana y corre una funcion cuando le picas
+-Entry: Es una entrada de texto
+
+Cada vez que creamos uno de estos elementos los guardamos en una variable
+para seguir trabajando con ellos despues por ejemplo les
+aplicamos el metodo .configure y .grid
+
+Para crear un elemento se utiliza este codigo:
+    variable_con_nombre_elemento = Elemento(nombre_de_tu_ventana)
+Por ejemplo para crear un Label
+    mi_label = Label(tk)
+Los elementos normalmente tambien llevan texto, para agregarlo se utiliza esto:
+    mi_label = Label(tk, text='Aqui va mi texto')
+
+.configure : Esta funcion nos sirve para modificar un elemento
+especifico en tkinter, donde podemos cambiar cosas como la letra,
+el color de fondo, el color del texto. Argumentos que utilizamos dentro
+de esta funcion: 
+    bg="color" : Sirve para cambiar el color de fondo
+    fg="color" : Sirve para cambiar el color del texto
+    font=("Arial", 12) : Sirve para cambiar la letra y tamano del texto
+
+Los colores de tkinter tienen nombres y los puedes ver en este link:
+http://www.science.smith.edu/dftwiki/images/3/3d/TkInterColorCharts.png
+
+.grid : Nos sirve para acomodar las cosas sencillamente como si fuera una cuadricula de Excel.
+Funciona con filas y columnas. En nuestro programa utilizamos solamente 1 columna,
+y vamos agregando filas debajo de cada una.
+Tambien dentro del .grid aveces agragamos cosas como "padx" y "pady" estos
+son solamente utilizados para crear espacio entre elementos. Para entenderlo
+mejor intenta cambiando los valores de padx y pady y mira como el espaciado entre
+elementos cambia.
+Tambien en el programa utilizamos sticky="ew" dentro del .grid. Este sirve
+para que el elemento tome todo el espacio de East a West, osea de izquierda a derecha.
+
+
+MATPLOTLIB
+Para crear una grafica basica de matplotlib
+simplemente es necesario pasarle una lista de datos
+a la funcion plt.plot()
+
+Por ejemplo: plt.plot( [1,2,3,5] )
+
+Despues para inicializar la grafica se utiliza
+plt.show()
+
+Eso es suficiente para generar una grafica.
+
+Matplotlib basico:
+https://www.youtube.com/watch?v=2VeHtuqW3YY

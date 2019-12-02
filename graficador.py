@@ -17,9 +17,6 @@ def agregar_datos():
     # crear lista con los datos
     datos = datos.split(',')
 
-    if datos[-1] == '':
-        del datos[-1]
-
     datos_int = []
     for dato in datos:
         dato = int(dato)
